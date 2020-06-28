@@ -1,0 +1,140 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+em,
+img,
+s,
+small,
+strike,
+strong,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+footer,
+header,
+figure,
+menu,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: inherit; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1;
+  box-sizing: border-box; }
+
+ol,
+ul {
+  list-style: none; }
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, white, #fff5f5); }
+
+header {
+  padding: 24px;
+  background-color: #fff; }
+
+.logo img {
+  max-width: 100px; }
+
+.main {
+  padding-bottom: 40px; }
+
+.main-content {
+  margin-top: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: center; }
+
+.title {
+  color: #413a3a;
+  font-size: 40px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase; }
+  .title-accent {
+    font-weight: 300;
+    color: #ce9797; }
+
+.lead {
+  color: #ce9797;
+  margin-top: 16px;
+  line-height: 1.5; }
+
+.email-block {
+  margin-top: 32px; }
+
+.email-form {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ce9797;
+  border-radius: 32px; }
+
+input[type="email"] {
+  background: transparent;
+  border: none;
+  color: #ce9797;
+  padding: 16px 24px;
+  flex: 1;
+  font-family: "Josefin Sans", sans-serif;
+  color: #f96262;
+  font-size: 16px;
+  line-height: 1.5; }
+  input[type="email"]:focus {
+    outline: none; }
+  input[type="email"]::-webkit-input-placeholder {
+    color: #ce9797; }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  padding: 16px 32px;
+  margin-left: -60px;
+  box-shadow: 4px 8px 18px -2px #ce9797; }
+  button:focus {
+    outline: none; }
+
+footer {
+  padding: 24px;
+  color: #ce9797;
+  font-size: 10px;
+  text-align: center; }
+  footer a {
+    color: #413a3a; }
+    footer a:hover {
+      color: #fff; }
