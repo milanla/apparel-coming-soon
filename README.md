@@ -15,3 +15,5 @@ Your users should be able to:
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
   - The email address is not formatted correctly
+
+See [live site](https://base-apparel-coming-soon.milanla.vercel.app/).
