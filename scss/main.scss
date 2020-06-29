@@ -74,17 +74,19 @@ body {
   position: relative;
 }
 
-.error:before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  background: url("/images/icon-error.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top left;
-  top: 16px;
-  right: 88px;
+.error {
+  &:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: url("/images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    top: 16px;
+    right: 120px;
+  }
 }
 
 .form-input {
@@ -226,12 +228,11 @@ footer {
     .logo {
       display: block;
       width: 180px;
-      margin-bottom: 120px;
+      margin-bottom: 100px;
     }
   }
 
   .content-title {
-    font-size: 72px;
     line-height: 1.2;
   }
 }

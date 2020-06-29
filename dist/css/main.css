@@ -125,7 +125,7 @@ body {
   background-size: contain;
   background-position: top left;
   top: 16px;
-  right: 88px; }
+  right: 120px; }
 
 .form-input {
   background: transparent;
@@ -224,7 +224,6 @@ footer {
     .content-block .logo {
       display: block;
       width: 180px;
-      margin-bottom: 120px; }
+      margin-bottom: 100px; }
   .content-title {
-    font-size: 72px;
     line-height: 1.2; } }
