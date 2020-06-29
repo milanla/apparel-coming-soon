@@ -47,7 +47,8 @@ footer,
 header,
 menu,
 nav,
-section {
+section,
+picture {
   display: block; }
 
 body {

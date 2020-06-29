@@ -20,55 +20,61 @@
     <link rel="stylesheet" href="dist/css/main.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <img class="logo" src="images/logo.svg" alt="site-logo" />
-      </nav>
+    <header class="header">
+      <img class="logo" src="images/logo.svg" alt="site-logo" />
     </header>
-    <section class="main">
+    <main class="main">
       <figure class="main-cover">
         <picture>
-          <source media="(max-width: 799px)" srcset="images/hero-mobile.jpg" />
-          <source media="(min-width: 800px)" srcset="images/hero-desktop.jpg" />
+          <source media="(max-width: 1200px)" srcset="images/hero-mobile.jpg" />
+          <source
+            media="(min-width: 1200px)"
+            srcset="images/hero-desktop.jpg"
+          />
           <img src="images/hero-mobile.jpg" alt="cover-image" />
         </picture>
       </figure>
       <section class="main-content">
-        <article class="content-block">
-          <h1 class="title">
-            <span class="title-accent">We're</span> coming soon
+        <div class="content-block">
+          <img class="logo" src="images/logo.svg" alt="site-logo" />
+          <h1 class="content-title">
+            <span class="content-title-accent">We're</span> coming soon
           </h1>
-          <p class="lead">
+          <p class="content-lead">
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
-            and our launch deals.
+            and our launch&nbsp;deals.
           </p>
-        </article>
+        </div>
         <div class="email-block">
-          <form class="email-form">
+          <form class="form">
             <input
               type="email"
               name="email"
               id="email"
+              class="form-input"
               placeholder="Email Address"
-              autocomplete="false"
             />
-
-            <button type="submit">
-              <img src="images/icon-arrow.svg" alt="submit button" />
+            <button type="submit" class="form-submit">
+              <img src="images/icon-arrow.svg" alt="arrow" />
             </button>
           </form>
 
-          <p class="form-error"></p>
+          <div class="form-submit-message">
+            <p class="submit-error">Please provide a valid email</p>
+          </div>
         </div>
       </section>
-    </section>
-    <footer>
-      <p class="attribution">
+    </main>
+    <!--
+    -->
+    <footer class="footer">
+      <p class="footer-attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Milan Sacher</a>.
+        >. Coded by
+        <a href="https://milanla.github.io" target="_blank">Milan Sacher</a>.
       </p>
     </footer>
   </body>

@@ -16,13 +16,13 @@ body {
   background: $gradient-main;
 }
 
-header {
+.header {
   padding: 24px;
   background-color: #fff;
-}
 
-.logo {
-  max-width: 100px;
+  .logo {
+    max-width: 100px;
+  }
 }
 
 .main {
@@ -30,25 +30,33 @@ header {
 }
 
 .main-content {
-  margin-top: 40px;
   padding-left: 24px;
   padding-right: 24px;
   text-align: center;
+
+  .logo {
+    display: none;
+  }
 }
 
-.title {
+.content-block {
+  margin-top: 40px;
+}
+
+.content-title {
   color: $dark;
   font-size: 40px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 
   &-accent {
+    display: block;
     font-weight: 300;
     color: $primary;
   }
 }
 
-.lead {
+.content-lead {
   color: $primary;
   margin-top: 16px;
   line-height: 1.5;
@@ -58,18 +66,32 @@ header {
   margin-top: 32px;
 }
 
-.email-form {
+.form {
   display: flex;
   justify-content: space-between;
   border: 1px solid $primary;
   border-radius: 32px;
+  position: relative;
 }
 
-input[type="email"] {
+.error:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: url("/images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+  top: 16px;
+  right: 88px;
+}
+
+.form-input {
   background: transparent;
   border: none;
   color: $primary;
-  padding: 16px 24px;
+  padding: 16px 32px;
   flex: 1;
   font-family: "Josefin Sans", sans-serif;
   color: $primary-dark;
@@ -85,7 +107,7 @@ input[type="email"] {
   }
 }
 
-button {
+.form-submit {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
@@ -98,19 +120,118 @@ button {
   &:focus {
     outline: none;
   }
+
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 37%, 81%));
+    box-shadow: 4px 16px 30px 5px $primary;
+  }
+}
+
+.form-submit-message {
+  margin-top: 8px;
+  padding-left: 24px;
+  text-align: left;
+}
+
+.submit-error {
+  visibility: hidden;
+  color: $primary-dark;
+  font-size: 14px;
 }
 
 footer {
   padding: 24px;
   color: $primary;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 
   a {
     color: $dark;
 
     &:hover {
-      color: #fff;
+      color: $primary-dark;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .content-block {
+    margin-top: 64px;
+  }
+
+  .content-title {
+    font-size: 64px;
+  }
+
+  .content-lead {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 24px;
+  }
+
+  .form-submit {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header,
+  .footer {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    padding-bottom: 0;
+    background: url("/images/bg-pattern-desktop.svg");
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  .main-content {
+    text-align: left;
+
+    & > * {
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .main-cover {
+    height: 100%;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content-block {
+    margin-top: 0;
+
+    .logo {
+      display: block;
+      width: 180px;
+      margin-bottom: 120px;
+    }
+  }
+
+  .content-title {
+    font-size: 72px;
+    line-height: 1.2;
   }
 }
